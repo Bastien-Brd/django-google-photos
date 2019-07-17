@@ -47,6 +47,13 @@ More on that as the project progresses.
 
 ## Configuration
 
+Your app will require a Google Photos Library API credentials. You need to us the Google Cloud Console to create such credentials for your app.
+1. Login to https://console.developers.google.com/apis/
+2. Create a new Project or use an existing one
+3. Navigate to Library, and search for Photos: enable the [Photos Library API](https://console.developers.google.com/apis/library/photoslibrary.googleapis.com)
+4. Click Create Credentials and follow the steps
+5. Download/copy the resulting client ID and client secret
+
 - Define the backup destinations in settings
 - Login to your Google Account and authorise this app to read your data
 - Define a backup schedule (daily, weekly, etc,)
