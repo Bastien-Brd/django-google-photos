@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from django.contrib.auth.views import logout_then_login
+from django.contrib.auth.views import LogoutView
 from django.views.generic.base import RedirectView
 
 
@@ -26,5 +26,5 @@ urlpatterns = [
     path('', RedirectView.as_view(url='/app/'), name='index'),
 
     path('auth/', include('social_django.urls', namespace='social')),
-    path('auth/logout/', logout_then_login, name='logout'),
+    path('auth/logout/', LogoutView.as_view(next_page='/'), name='logout'),
 ]
