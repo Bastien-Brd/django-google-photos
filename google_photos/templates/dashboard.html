@@ -6,8 +6,18 @@
         This is your dashboard.
     </h1>
 
-    <p>
-        Your Google Photos Library stats will show up here soon. Stay tuned.
-    </p>
+    {% if error %}
+        <p>Error while accessing your Google Photos data: {{ error }}</p>
+    {% else %}
+        <p>
+            Your last photo has id {{ last_photo.id }}.
+        </p>
+        <p>
+            Meta data: {{ last_photo.mediaMetadata }}
+        </p>
+        <p>
+            <a href="{{ last_photo.productUrl }}">View it in Google Photos.</a>
+        </p>
+    {% endif %}}
 </h1>
 {% endblock %}
