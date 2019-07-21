@@ -18,7 +18,6 @@ from django.urls import path, include
 
 from django.contrib.auth.views import logout_then_login
 from django.views.generic.base import RedirectView
-from django.conf import settings
 
 
 urlpatterns = [
