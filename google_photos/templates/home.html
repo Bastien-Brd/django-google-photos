@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>
+    {% if request.user.is_anonymous %}
+        <h1>Welcome!</h1>
+        <p>
+            You must login with Google to get started. Please use the login button.
+        </p>
+    {% else %}
+        <h1>
+            This is your dashboard.
+        </h1>
+    {% endif %}
+</h1>
+{% endblock %}
