@@ -17,12 +17,14 @@ from django.contrib import admin
 from django.urls import path, include
 
 from django.contrib.auth.views import logout_then_login
+from django.views.generic.base import RedirectView
 from django.conf import settings
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('app/', include('google_photos.urls', namespace='google_photos')),
+    path('', RedirectView.as_view(url='/app/'), name='index'),
 
     path('auth/', include('social_django.urls', namespace='social')),
     path('auth/logout/', logout_then_login, name='logout'),
