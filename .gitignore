@@ -1,5 +1,6 @@
 # Bash scripts for secret env variables
 dgp_secrets.sh
+.env
 
 # IDE
 .idea/*
